@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voiceflow Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="chat-container"></div>
+    <!-- Button to trigger chat -->
+    <button id="chat-button">Do you want to chat with us?</button>
+
+    <script>
+        document.getElementById("chat-container").style.display = "none";
+      (function (d, t) {
+        var v = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+          window.voiceflow.chat.load({
+            verify: { projectID: '6752e88f2dc51705050acfb2'  },
+            url: "https://general-runtime.voiceflow.com",
+            versionID: "production",
+            render: {
+              mode: "embedded",
+              target: document.getElementById("chat-container"),
+            },
+            autostart: false,
+          });
+        };
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+        v.type = "text/javascript";
+        s.parentNode.insertBefore(v, s);
+      })(document, "script");
+
+      // Add functionality to button to open the chat
+      document.getElementById("chat-button").addEventListener("click", function () {
+        document.getElementById("chat-container").style.display = "block"; // Hide the button after chat starts
+      });
+    </script>
+  </body>
+</html>

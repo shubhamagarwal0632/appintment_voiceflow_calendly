@@ -1,0 +1,30 @@
+#chat-container {
+    position: absolute;
+    right: 0;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#chat-output {
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
